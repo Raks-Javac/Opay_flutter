@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        button{
+            width:200px;
+            height:200px;
+        }
+    </style>
+    <title>我的测试站点</title>
+</head>
+<body>
+    <button type="button" onclick="getUserAgent()">获取UserAgent</button>
+    <button type="button" onclick="ok()">确定</button>
+    <button type="button" onclick="cancel()">取消</button>
+    <button type="button" onclick="referenceCodeReturn()">ReferenceCodeReturn</button>
+</body>
+
+<script>
+
+        function getUserAgent(){
+            alert(navigator.userAgent)
+        }
+        function ok(){
+            window.clickResultOKBtn.postMessage(
+                "{\"eventName\":\"ok\",\"orderStatus\":\"2\",\"orderNo\":\"3\",\"payNo\":\"3\",\"merchantId\":\"3\",\"referenceCode\":\"3\"}"
+            );
+        }
+        function cancel(){
+            window.clickResultCancelBtn.postMessage(
+                "{\"eventName\":\"cancel\",\"orderStatus\":\"2\",\"orderNo\":\"3\",\"payNo\":\"3\",\"merchantId\":\"3\",\"referenceCode\":\"3\"}"
+            );
+        }
+
+        function referenceCodeReturn(){
+            window.clickReferenceCodeReturnBtn.postMessage(
+                "{\"eventName\":\"referenceCodeReturn\",\"orderStatus\":\"2\",\"orderNo\":\"3\",\"payNo\":\"3\",\"merchantId\":\"3\",\"referenceCode\":\"3\"}"
+            );
+        }
+</script>
+</html>
