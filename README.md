@@ -1,4 +1,4 @@
-# Opay API Integration in Flutter
+# Opay SDK Integration in Flutter
 
 This is a Flutter project that integrates the Opay API into a mobile application. The Opay API provides a range of payment solutions for businesses in Nigeria and other African countries.
 
